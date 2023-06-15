@@ -149,6 +149,9 @@ app_license = "MIT"
 # override_doctype_dashboards = {
 #	"Task": "shop_by_warehouse.task.get_dashboard_data"
 # }
+override_whitelisted_methods = {
+    "erpnext.e_commerce.api.get_product_filter_data": "shop_by_warehouse.api.get_product_filter_data"
+}
 
 # exempt linked doctypes from being automatically cancelled
 #
