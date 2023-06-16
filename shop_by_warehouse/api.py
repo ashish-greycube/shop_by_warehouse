@@ -137,8 +137,8 @@ class CustomProductQuery(ProductQuery):
 					where item_code = %s and warehouse in ({})""".format(", ".join(["%s"] * len(warehouse_to_search))),
 					tuple([item_code]+warehouse_to_search),as_dict=1)
 				if len(actual_qty)>0:
-					item.website_warehouse=actual_qty[0].warehouse
-					frappe.db.set_value('Website Item', item.name, 'website_warehouse', actual_qty[0].warehouse)
+					# item.website_warehouse=actual_qty[0].warehouse
+					# frappe.db.set_value('Website Item', item.name, 'website_warehouse', actual_qty[0].warehouse)
 					new_item_list.append(item)
 				else:
 					count=count-1
